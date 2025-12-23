@@ -1,8 +1,7 @@
-# Импорт библиотек
-import torch                            # Основная библиотека PyTorch
-import numpy as np                      # Для численных операций
-from model import MusicLSTM             # Импорт модели
-import os                               # Для работы с файловой системой
+import torch                            
+import numpy as np                      
+from model import MusicLSTM             
+import os                               
 
 # Загрузка обученной модели
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # Определение устройства

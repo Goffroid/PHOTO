@@ -1,7 +1,6 @@
-# Импорт библиотек
-import torch                            # Основная библиотека PyTorch
-import torch.nn as nn                   # Модуль для нейронных сетей
-import torch.nn.functional as F         # Функциональные модули
+import torch                            
+import torch.nn as nn                   
+import torch.nn.functional as F         
 
 # Определение модели LSTM
 class MusicLSTM(nn.Module):

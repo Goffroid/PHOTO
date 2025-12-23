@@ -1,11 +1,10 @@
-# Импорт библиотек
-import torch                            # Основная библиотека PyTorch
-import torch.nn as nn                   # Модуль для нейронных сетей
-import torch.optim as optim             # Оптимизаторы
-from torch.utils.data import DataLoader, TensorDataset # Для работы с данными
-import numpy as np                      # Для численных операций
-from model import MusicLSTM             # Импорт модели
-import os                               # Для работы с файловой системой
+import torch                            
+import torch.nn as nn                   
+import torch.optim as optim             
+from torch.utils.data import DataLoader, TensorDataset 
+import numpy as np                      
+from model import MusicLSTM             
+import os                               
 
 # Настройки для ускорения обучения
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # Использование GPU
@@ -105,4 +104,4 @@ for epoch in range(num_epochs):          # Цикл по эпохам
 model_save_path = "models/music_lstm.pth" # Путь для сохранения модели
 os.makedirs("models", exist_ok=True)      # Создание папки models если её нет
 torch.save(model.state_dict(), model_save_path) # Сохранение весов модели
-print(f"\nМодель сохранена в {model_save_path}") # Сообщение о сохранении модели
+print(f"\nМодель сохранена в {model_save_path}") 

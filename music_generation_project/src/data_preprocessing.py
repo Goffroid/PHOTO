@@ -1,8 +1,7 @@
-# Импорт библиотек
-import pretty_midi                     # Для работы с MIDI-файлами
-import numpy as np                     # Для численных операций
-import os                              # Для работы с файловой системой
-from tqdm import tqdm                  # Для прогресс-бара
+import pretty_midi                     
+import numpy as np                     
+import os                              
+from tqdm import tqdm                  
 
 # Функция для загрузки и обработки MIDI-файлов
 def load_midi_files(directory):

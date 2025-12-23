@@ -1,8 +1,7 @@
-# Импорт библиотек
-import numpy as np                      # Для работы с числовыми данными
-import pretty_midi                      # Для создания MIDI файлов
-import os                               # Для работы с файловой системой
-import matplotlib.pyplot as plt         # Для визуализации
+import numpy as np                      
+import pretty_midi                      
+import os                               
+import matplotlib.pyplot as plt         
 
 # Функция для преобразования данных в MIDI
 def npy_to_midi(npy_path, output_midi="generated_music.mid", note_duration=0.5, velocity=100):
@@ -96,7 +95,7 @@ def visualize_music(pitches, note_duration=0.5):
     plt.savefig('generated_music_visualization.png', dpi=150) # Сохранение графика
     plt.show()                                        # Отображение графиков
     
-    print(f"Визуализация сохранена: generated_music_visualization.png") # Сообщение
+    print(f"Визуализация сохранена: generated_music_visualization.png") 
 
 # Основная функция
 if __name__ == "__main__":
@@ -129,5 +128,5 @@ if __name__ == "__main__":
         for note, count in top_notes:  # Перебор топ-нот
             name = note_names.get(note, f"Нота {note}") # Получение названия
             print(f"  {name}: {count} раз ({count/len(pitches)*100:.1f}%)") # Вывод
-    else:                               # Если файл не найден
-        print(f"Файл {npy_file} не найден. Сначала запустите generate.py") # Ошибка
+    else:                               
+        print(f"Файл {npy_file} не найден. Сначала запустите generate.py") 
